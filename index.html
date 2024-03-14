@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PWA</title>
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://icons.iconarchive.com/icons/graphicloads/filetype/256/png-icon.png">
+    
+    <!-- <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.oaistatic.com/_next/static/media/apple-touch-icon.59f2e898.png"> -->
+    <!-- <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.oaistatic.com/_next/static/media/favicon-32x32.be48395e.png"> -->
+    <!-- <link rel="icon" type="image/png" sizes="16x16" href="https://cdn.oaistatic.com/_next/static/media/favicon-16x16.9b8dbb69.png"> -->
+    <!-- <meta name="theme-color"> -->
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript">
+        // ?reset function or just clear the cookies
+        // if (window.location.search == '?reset'){localStorage.setItem('url', null);}
+        if(window.location.search == '?reset' || localStorage.length==0 || localStorage.getItem('url')=='null' || localStorage.getItem('url')==''){
+            let url = window.prompt("Enter the url you want to connect to...");
+            localStorage.setItem('url', url);
+        }
+        console.log(localStorage);
+    </script>
+
+</head>
+<body>
+    <iframe id="5294fafdf9bda50ab268"></iframe>
+    <script>
+        document.getElementById('5294fafdf9bda50ab268').src = localStorage.getItem('url');
+    </script>
+</body>
+</html>
